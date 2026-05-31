@@ -75,13 +75,13 @@ const Contacto = () => {
               </div>
             </a>
 
-            <a href="https://github.com/PinGuUwU" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-gradient-to-br from-purple-900/20 to-slate-900/40 backdrop-blur-xl border border-purple-500/20 rounded-xl hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
+            <a href="https://github.com/PrisRedondo29" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-gradient-to-br from-purple-900/20 to-slate-900/40 backdrop-blur-xl border border-purple-500/20 rounded-xl hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
               <div className="p-3 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 group-hover:scale-110 transition-transform duration-300">
                 <FaGithub className="text-white" size={20} />
               </div>
               <div>
                 <h4 className="text-white font-semibold mb-1">GitHub</h4>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">github.com/PinGuUwU</p>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">github.com/PrisRedondo29</p>
               </div>
             </a>
           </div>

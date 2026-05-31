@@ -30,7 +30,7 @@ const skillCategories = [
     icon: FaCog,
     title: "Herramientas & SO",
     color: "from-orange-500 to-orange-600",
-    skills: ["Git", "GitHub", "Linux", "Visual Studio Code", "IntelliJ", "Postman"]
+    skills: ["Git", "GitHub", "Linux", "Visual Studio Code", "IntelliJ", "Postman", "habilidades.skills.powerbi"]
   }
 ];
 
@@ -72,7 +72,7 @@ const skillCategories = [
                         key={idx}
                         className="px-3 py-1 rounded-full text-sm font-medium bg-white/10 text-gray-200 group-hover:bg-purple-500/30 group-hover:text-purple-200 transition-all duration-300 border border-white/10 group-hover:border-purple-400/50"
                       >
-                        {skill}
+                        {t(skill)}
                       </span>
                     ))}
                   </div>

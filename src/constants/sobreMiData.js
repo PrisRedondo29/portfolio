@@ -21,16 +21,16 @@ export const educationData = [
         institutionKey: "sobremi.edu3.inst",
         titleKey: "sobremi.edu3.title",
         descriptionKey: "sobremi.edu3.desc",
-        url: "https://www.unlu.edu.ar/",
-        icon: "FaMicroscope"
+        url: "https://www.salesforce.com/trailblazer/vejh0i7sqso1772h3b",
+        icon: "FaSalesforce"
     },
     {
         id: 4,
         institutionKey: "sobremi.edu4.inst",
         titleKey: "sobremi.edu4.title",
         descriptionKey: "sobremi.edu4.desc",
-        url: "https://www.salesforce.com/trailblazer/vejh0i7sqso1772h3b",
-        icon: "FaSalesforce"
+        url: "https://www.unlu.edu.ar/",
+        icon: "FaMicroscope"
     }
 ];
 

@@ -6,7 +6,7 @@ export const proyectosData = [
         descriptionKey: "proyectos.card4.desc",
         tags: ["React 19", "Firebase", "Graph Theory", "UX/UI"],
         image: "imgs/mockup simulador correlativas.png",
-        repoLink: "https://github.com/PinGuUwU/simulador-correlativas",
+        repoLink: "https://github.com/PrisRedondo29/simulador-correlativas",
         demoLink: "https://simulador-unlu-sistemas.netlify.app/",
         status: "in-progress"
     },
@@ -25,7 +25,7 @@ export const proyectosData = [
         descriptionKey: "proyectos.card2.desc",
         tags: ["React 19", "Tailwind 4", "ReactGA 4", "EmailJS"],
         image: "imgs/mockup portfolio.png",
-        repoLink: "https://github.com/PinGuUwU/portfolio"
+        repoLink: "https://github.com/PrisRedondo29/portfolio"
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ export const proyectosData = [
         descriptionKey: "proyectos.card3.desc",
         tags: ["Java 17+", "Java RMI", "JUnit", "MVC"],
         image: "imgs/cartas-uno.jpg",
-        repoLink: "https://github.com/PinGuUwU/Juego-de-cartas-UNO-offline-LAN"
+        repoLink: "https://github.com/PrisRedondo29/Juego-de-cartas-UNO-offline-LAN"
     },
     {
         id: 5,
@@ -41,6 +41,6 @@ export const proyectosData = [
         descriptionKey: "proyectos.card5.desc",
         tags: ["proyectos.tag.dev"],
         image: "imgs/foto-graduacion.jpg",
-        repoLink: "https://github.com/PinGuUwU"
+        repoLink: "https://github.com/PrisRedondo29"
     }
 ];

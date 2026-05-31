@@ -4,7 +4,10 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import ReactGA from "react-ga4";
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const cvPath = language === 'en' ? 'files/PriscilaRedondo-English.pdf' : 'files/PriscilaRedondo-ConTodo.pdf';
+  const cvFileName = language === 'en' ? 'PriscilaRedondo-English.pdf' : 'PriscilaRedondo-ConTodo.pdf';
 
   return (
     <section id="hero" className="relative pt-24 pb-20 px-6 md:px-20">
@@ -69,7 +72,7 @@ const Hero = () => {
                 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 items-center justify-center sm:justify-start">
                   <div className="flex flex-wrap gap-4 justify-center sm:justify-start w-full sm:w-auto">
                     <a
-                      href="https://github.com/PinGuUwU"
+                      href="https://github.com/PrisRedondo29"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => ReactGA.event('click_red_social', { plataforma: 'GitHub', seccion: 'Hero' })}
@@ -90,13 +93,13 @@ const Hero = () => {
                     </a>
                   </div>
 
-                  <a href="files/Priscila Redondo CV.pdf" target="_blank" rel="noopener noreferrer" 
+                  <a href={cvPath} target="_blank" rel="noopener noreferrer" 
                     onClick={() => ReactGA.event('interaccion_cv', { accion: 'Ver', seccion: 'Hero' })}
                     className="w-full sm:w-auto px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-linear-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/50 text-white text-center">
                     {t('hero.viewCV')}
                   </a>
 
-                  <a download="Priscila Redondo CV.pdf" href="files/Priscila Redondo CV.pdf" 
+                  <a download={cvFileName} href={cvPath} 
                     onClick={() => ReactGA.event('interaccion_cv', { accion: 'Descargar', seccion: 'Hero' })}
                     className="w-full sm:w-auto px-6 py-3 rounded-full font-semibold transition-all duration-300 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-purple-500/50 text-white text-center">
                     {t('hero.downloadCV')}

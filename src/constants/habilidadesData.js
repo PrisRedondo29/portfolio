@@ -10,7 +10,7 @@ export const habilidadesData = {
             "Postgresql", "MongoDB", "SQL", "SOQL", "SOSL",
             "Git", "Github", "Trello", "Salesforce Flow Builder",
             "Linux", "Visual Studio Code", "IntelliJ", 
-            "habilidades.skills.dataAnalysis", "Wikipedia/Wikidata", "Zotero"
+            "habilidades.skills.dataAnalysis", "habilidades.skills.powerbi", "Wikipedia/Wikidata", "Zotero"
         ]
     },
     blandas: {
