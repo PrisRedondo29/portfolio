@@ -10,16 +10,19 @@ const Experiencia = () => {
   return (
     <section id="experiencia" className="py-20 px-6 md:px-20 relative">
       <div className="max-w-7xl mx-auto">
+        
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <FaBriefcase className="text-purple-500" size={32} />
-            <h2 className="text-4xl md:text-5xl font-bold">
-              <span className="bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                {t('experiencia.title')}
-              </span>
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <FaBriefcase className="text-indigo-400" size={28} />
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+              {t('experiencia.title')}
             </h2>
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <span className="font-mono-tech text-xs tracking-widest text-indigo-400/80 uppercase block mb-3">
+            // TRAYECTORIA Y LOGROS TÉCNICOS
+          </span>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

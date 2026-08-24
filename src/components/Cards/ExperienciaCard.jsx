@@ -2,20 +2,29 @@ import React from 'react';
 
 const ExperienciaCard = ({ title, institution, description }) => {
   return (
-    <div className="group relative bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-xl border border-purple-500/30 p-8 rounded-2xl h-full overflow-hidden transition-all duration-300 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20">
-      {/* Gradient Background on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+    <div className="cyber-card group relative p-6 md:p-8 rounded-2xl h-full overflow-hidden border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 shadow-xl shadow-indigo-950/20 hover:shadow-indigo-500/10">
       
-      <div className="relative z-10">
-        <div className="flex items-start gap-3 mb-4">
-          <div className="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full mt-1 group-hover:h-10 transition-all duration-300"></div>
-          <div>
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 group-hover:from-purple-200 group-hover:to-pink-200 transition-all duration-300">{title}</h3>
-            <h4 className="text-purple-400/80 font-semibold text-sm mt-1 group-hover:text-purple-300 transition-colors">{institution}</h4>
-          </div>
+      {/* Node Decorator */}
+      <div className="flex items-start gap-4 mb-4">
+        <div className="relative flex-shrink-0 mt-1.5">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-60"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+          </span>
         </div>
-        <p className="text-gray-300 text-base leading-relaxed group-hover:text-gray-200 transition-colors">{description}</p>
+        <div>
+          <h3 className="text-xl font-bold text-slate-100 group-hover:text-indigo-200 transition-colors">
+            {title}
+          </h3>
+          <span className="font-mono-tech text-xs text-indigo-400 tracking-wide block mt-1">
+            // {institution}
+          </span>
+        </div>
       </div>
+      
+      <p className="text-slate-300 text-sm leading-relaxed pl-7 group-hover:text-slate-200 transition-colors">
+        {description}
+      </p>
     </div>
   );
 };

@@ -2,80 +2,81 @@ import React from 'react';
 import Tag from '../Tag';
 import { habilidadesData } from '../../constants/habilidadesData';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { FaCode, FaServer, FaCloud, FaCog, FaUsers } from 'react-icons/fa';
+import { FaCode, FaServer, FaCloud, FaCog, FaLaptopCode } from 'react-icons/fa';
 
 const Habilidades = () => {
   const { t } = useLanguage();
 
-const skillCategories = [
-  {
-    icon: FaCode,
-    title: "Frontend",
-    color: "from-blue-500 to-blue-600",
-    skills: ["React 19", "JavaScript", "Next.js", "Tailwindcss 4", "Vite"]
-  },
-  {
-    icon: FaServer,
-    title: "Backend & CRM",
-    color: "from-green-500 to-green-600",
-    skills: ["Node.js", "Express", "Apex", "Java", "MongoDB", "PostgreSQL", "SOQL"]
-  },
-  {
-    icon: FaCloud,
-    title: "Cloud & DevOps",
-    color: "from-purple-500 to-purple-600",
-    skills: ["CI/CD", "Docker", "AWS"]
-  },
-  {
-    icon: FaCog,
-    title: "Herramientas & SO",
-    color: "from-orange-500 to-orange-600",
-    skills: ["Git", "GitHub", "Linux", "Visual Studio Code", "IntelliJ", "Postman", "habilidades.skills.powerbi"]
-  }
-];
+  const skillCategories = [
+    {
+      icon: FaCode,
+      title: "Frontend",
+      color: "border-blue-500/30 text-blue-400 bg-blue-950/30",
+      skills: ["React 19", "JavaScript", "Next.js", "Tailwindcss 4", "Vite"]
+    },
+    {
+      icon: FaServer,
+      title: "Backend & CRM",
+      color: "border-emerald-500/30 text-emerald-400 bg-emerald-950/30",
+      skills: ["Node.js", "Express", "Apex", "Java", "MongoDB", "PostgreSQL", "SOQL"]
+    },
+    {
+      icon: FaCloud,
+      title: "Cloud & DevOps",
+      color: "border-purple-500/30 text-purple-400 bg-purple-950/30",
+      skills: ["CI/CD", "Docker", "AWS"]
+    },
+    {
+      icon: FaCog,
+      title: "Herramientas & SO",
+      color: "border-amber-500/30 text-amber-400 bg-amber-950/30",
+      skills: ["Git", "GitHub", "Linux", "Visual Studio Code", "IntelliJ", "Postman", "habilidades.skills.powerbi"]
+    }
+  ];
 
   return (
     <section id="habilidades" className="py-20 px-6 md:px-20 relative">
       <div className="max-w-7xl mx-auto px-2 sm:px-0">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            <span className="bg-linear-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+        
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <FaLaptopCode className="text-indigo-400" size={28} />
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
               {t('habilidades.title')}
-            </span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            </h2>
+          </div>
+          <span className="font-mono-tech text-xs tracking-widest text-indigo-400/80 uppercase block mb-3">
+            // TECH STACK & COMPETENCIAS
+          </span>
+          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
 
-        {/* Modern Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mb-16">
+        {/* Skill Category Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-xl border border-purple-500/20 p-6 rounded-2xl overflow-hidden transition-all duration-300 hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1"
+                className="cyber-card p-6 rounded-2xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 shadow-xl shadow-indigo-950/20"
               >
-                {/* Gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 pointer-events-none`}></div>
-
-                <div className="relative z-10">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} group-hover:scale-110 transition-transform duration-300`}>
-                      <IconComponent className="text-white" size={24} />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className={`p-2.5 rounded-xl border ${category.color}`}>
+                    <IconComponent size={20} />
                   </div>
+                  <h3 className="text-lg font-bold text-white">{category.title}</h3>
+                </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 rounded-full text-sm font-medium bg-white/10 text-gray-200 group-hover:bg-purple-500/30 group-hover:text-purple-200 transition-all duration-300 border border-white/10 group-hover:border-purple-400/50"
-                      >
-                        {t(skill)}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2.5 py-1 rounded-md text-xs font-mono-tech bg-indigo-950/40 text-indigo-200 border border-indigo-500/20 hover:border-indigo-400/50 transition-colors"
+                    >
+                      {t(skill)}
+                    </span>
+                  ))}
                 </div>
               </div>
             );
@@ -83,13 +84,15 @@ const skillCategories = [
         </div>
 
         {/* Detailed Technical & Soft Skills */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          
           {/* Habilidades Técnicas Detalladas */}
-          <div className="bg-gradient-to-br from-purple-900/20 to-slate-900/40 backdrop-blur-xl border border-purple-500/20 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-4">
+          <div className="cyber-card p-8 rounded-2xl border border-indigo-500/20">
+            <h3 className="text-xl font-bold text-slate-100 mb-3 flex items-center gap-2">
+              <span className="font-mono-tech text-indigo-400 text-sm">//</span>
               {t(habilidadesData.tecnicas.titleKey)}
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-slate-300 text-sm leading-relaxed mb-6">
               {t(habilidadesData.tecnicas.descriptionKey)}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -100,11 +103,12 @@ const skillCategories = [
           </div>
 
           {/* Habilidades Blandas Detalladas */}
-          <div className="bg-gradient-to-br from-pink-900/20 to-slate-900/40 backdrop-blur-xl border border-pink-500/20 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300 mb-4">
+          <div className="cyber-card p-8 rounded-2xl border border-indigo-500/20">
+            <h3 className="text-xl font-bold text-slate-100 mb-3 flex items-center gap-2">
+              <span className="font-mono-tech text-purple-400 text-sm">//</span>
               {t(habilidadesData.blandas.titleKey)}
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-slate-300 text-sm leading-relaxed mb-6">
               {t(habilidadesData.blandas.descriptionKey)}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -114,6 +118,7 @@ const skillCategories = [
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

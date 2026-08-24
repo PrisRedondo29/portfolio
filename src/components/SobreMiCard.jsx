@@ -23,22 +23,25 @@ const SobreMiCard = ({ institution, title, description, icon, url }) => {
     return (
         <CardWrapper
             {...wrapperProps}
-            className="bg-gradient-to-br from-purple-900/20 to-slate-900/40 backdrop-blur-xl border border-purple-500/30 p-6 rounded-2xl hover:border-purple-400/60 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group block overflow-hidden"
+            className="cyber-card p-6 rounded-2xl border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 group block overflow-hidden shadow-xl shadow-indigo-950/20"
         >
-            {/* Background gradient on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            
             <div className="relative z-10 flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-lg text-purple-300 group-hover:from-purple-500/50 group-hover:to-pink-500/50 transition-all duration-300 group-hover:scale-110 flex-shrink-0">
-                    <IconComponent size={28} />
+                <div className="p-3 bg-indigo-950/60 border border-indigo-500/30 rounded-xl text-indigo-400 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <IconComponent size={24} />
                 </div>
                 <div className="flex-grow">
-                    <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-300 mb-1">{institution}</h3>
-                    <h4 className="text-white font-semibold mb-2 group-hover:text-purple-200 transition-colors">{title}</h4>
-                    <p className="text-gray-400 text-sm mb-3 group-hover:text-gray-300 transition-colors leading-relaxed">{description}</p>
+                    <span className="font-mono-tech text-xs text-indigo-400 tracking-wider block mb-1">
+                        // {institution}
+                    </span>
+                    <h3 className="text-base font-bold text-slate-100 mb-2 group-hover:text-indigo-200 transition-colors">
+                        {title}
+                    </h3>
+                    <p className="text-slate-300 text-sm mb-3 group-hover:text-slate-200 transition-colors leading-relaxed">
+                        {description}
+                    </p>
                     {url && (
-                        <span className="text-purple-400 text-sm group-hover:text-purple-300 transition-colors font-medium inline-flex items-center gap-2 group-hover:gap-3">
-                            {t('sobremi.moreInfo')} <FaArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                        <span className="text-indigo-400 text-xs font-mono-tech group-hover:text-indigo-300 transition-colors inline-flex items-center gap-1.5 group-hover:gap-2">
+                            {t('sobremi.moreInfo')} <FaArrowRight size={10} className="group-hover:translate-x-1 transition-transform" />
                         </span>
                     )}
                 </div>
