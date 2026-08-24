@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { useLanguage } from '../../contexts/LanguageContext';
-import ReactGA from "react-ga4";
+import { smoothScrollTo } from '../../utils/smoothScroll';
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -143,7 +143,7 @@ const Hero = () => {
               href="#contacto" 
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
+                smoothScrollTo('#contacto', 70, 900);
               }}
               className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors cursor-pointer"
             >

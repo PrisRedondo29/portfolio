@@ -4,6 +4,8 @@ import links from '../constants/linksNavBar';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
 
+import { smoothScrollTo } from '../utils/smoothScroll';
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useLanguage();
@@ -11,10 +13,7 @@ const NavBar = () => {
   const handleScrollTo = (e, href) => {
     e.preventDefault();
     setIsOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    smoothScrollTo(href, 70, 900);
   };
 
   return (
