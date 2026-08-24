@@ -60,6 +60,7 @@ export const translations = {
         "proyectos.card5.title": "Próximamente",
         "proyectos.card5.desc": "Me encuentro enfocada en expandir mi trayectoria profesional. Tengo nuevos proyectos en planificación y desarrollo activo que pronto estaré compartiendo en este espacio.",
         "proyectos.tag.dev": "En desarrollo",
+        "proyectos.roulette.hint": "¡Girá la ruleta y descubrí mis proyectos!",
 
         "habilidades.title": "Habilidades",
         "habilidades.tecnicas.title": "Habilidades Técnicas",
@@ -168,6 +169,7 @@ export const translations = {
         "proyectos.card5.title": "Coming Soon",
         "proyectos.card5.desc": "I am currently focused on expanding my professional career. I have new projects in planning and active development that I will soon be sharing in this space.",
         "proyectos.tag.dev": "In Development",
+        "proyectos.roulette.hint": "Spin the roulette and discover my projects!",
 
         "habilidades.title": "Skills",
         "habilidades.tecnicas.title": "Technical Skills",
