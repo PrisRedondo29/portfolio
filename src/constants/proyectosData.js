@@ -1,12 +1,23 @@
 
 export const proyectosData = [
     {
+        id: 6,
+        title: "⚡ Bitácora.dev (App Freelance)",
+        shortTitle: "Bitácora.dev",
+        descriptionKey: "proyectos.card6.desc",
+        tags: ["React", "Vite", "TypeScript", "Tailwind CSS", "Framer Motion", "Firebase", "LocalStorage"],
+        image: "imgs/mockup track-web.jpeg",
+        repoLink: "https://github.com/PrisRedondo29/trackweb",
+        demoLink: "https://trackweb-alpha.vercel.app/",
+        showInRoulette: true
+    },
+    {
         id: 4,
         title: "🎓 Mi Avance Académico",
         shortTitle: "Mi Avance Académico",
         descriptionKey: "proyectos.card4.desc",
         tags: ["React 19", "Firebase", "Graph Theory", "UX/UI"],
-        image: "imgs/mockup simulador correlativas.png",
+        image: "imgs/mockup trayectoria academica.jpeg",
         repoLink: "https://github.com/PrisRedondo29/simulador-correlativas",
         demoLink: "https://simulador-unlu-sistemas.netlify.app/",
         status: "in-progress",
@@ -18,7 +29,7 @@ export const proyectosData = [
         shortTitle: "ConectAR-DEV",
         descriptionKey: "proyectos.card1.desc",
         tags: ["React 19", "Node.js (Express 5)", "MongoDB", "JWT"],
-        image: "imgs/mockup conectar-dev.png",
+        image: "imgs/mockup conectar-dev.jpeg",
         repoLink: "https://github.com/Soriez/ConectAR-DEV",
         demoLink: "https://conectar-dev.netlify.app/",
         showInRoulette: true
@@ -29,7 +40,7 @@ export const proyectosData = [
         shortTitle: "Portfolio Personal",
         descriptionKey: "proyectos.card2.desc",
         tags: ["React 19", "Tailwind 4", "ReactGA 4", "EmailJS"],
-        image: "imgs/mockup portfolio.png",
+        image: "imgs/mockup portfolio.jpeg",
         repoLink: "https://github.com/PrisRedondo29/portfolio",
         showInRoulette: true
     },
