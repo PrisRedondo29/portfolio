@@ -16,7 +16,7 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#07080d] cyber-grid text-slate-100 relative">
+    <div className="min-h-screen bg-[#07080d] cyber-grid text-slate-100 relative overflow-x-hidden">
       <NavBar />
       
       {/* Subtle Technological Ambient Glows */}

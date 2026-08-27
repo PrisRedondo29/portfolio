@@ -31,16 +31,16 @@ export default function ProyectoModal({ project, onClose }) {
 
   if (!project) return null;
 
-  const title       = project.titleKey ? t(project.titleKey) : project.title;
+  const title = project.titleKey ? t(project.titleKey) : project.title;
   const description = t(project.descriptionKey);
-  const tags        = project.tags.map((tag) =>
+  const tags = project.tags.map((tag) =>
     tag.startsWith("proyectos.") ? t(tag) : tag
   );
 
   return (
     /* Backdrop */
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 pt-20 sm:p-6"
       style={{ background: "rgba(7,8,13,0.88)", backdropFilter: "blur(12px)" }}
       onClick={onClose}
     >

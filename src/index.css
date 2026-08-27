@@ -4,12 +4,15 @@
   html {
     scroll-behavior: smooth !important;
     scroll-padding-top: 5rem;
+    overflow-x: hidden;
+    max-width: 100%;
   }
   body {
     background-color: #07080d;
     color: #f0f0f8;
     font-family: 'DM Sans', sans-serif;
-    overflow-x: clip;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
